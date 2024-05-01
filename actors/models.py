@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 
 NATIONALITY_CHOICES = (
-    ('USA', 'Estados Unidos'),
-    ('BRAZIL', 'Brasil'),
-    ('FRANCE', 'França'),
-    ('GERMANY', 'Alemnaha'),
+    ('US', 'Estados Unidos'),
+    ('BR', 'Brasil'),
+    ('FR', 'França'),
+    ('DE', 'Alemnaha'),
     ('UK', 'Inglaterra'),
     ('IT', 'Italia'),
     ('ES', 'Espanha'),
