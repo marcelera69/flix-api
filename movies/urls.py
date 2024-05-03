@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-import views
+from . import views
 
 urlpatterns = [
      path('movies/', views.MovieCreateListView.as_view(), name='movie-create-list'),

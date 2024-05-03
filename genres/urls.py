@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-import views
+from . import views
 
 urlpatterns = [
     path('genres/', views.GenreCreateListVIew.as_view() , name='genre-create-list'),
