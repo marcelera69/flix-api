@@ -13,7 +13,7 @@ class MovieModelSerializer(serializers.ModelSerializer):
         rate = obj.reviews.aggregate(Avg('stars'))['stars__avg']        
 
         if rate:
-            return rate
+            return round(rate, 1)
         
         return None
        
