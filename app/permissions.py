@@ -15,7 +15,6 @@ class GlobalPermissions(permissions.BasePermission):
 
 
     def get_model_permission_codename(self, method, view):
-        print('Entrou 2')
         model_name = view.queryset.model._meta.model_name
         app_label = view.queryset.model._meta.app_label
         action = self.get_action_sufix(method)
@@ -25,7 +24,6 @@ class GlobalPermissions(permissions.BasePermission):
 
 
     def has_permission(self, request, view):
-        print('Entrou')
         model_permission_codename = self.get_model_permission_codename(
             method = request.method, 
             view=view
