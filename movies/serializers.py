@@ -3,6 +3,7 @@ from rest_framework import serializers
 from movies.models import Movie
 
 class MovieModelSerializer(serializers.ModelSerializer):
+    
     rate = serializers.SerializerMethodField(read_only = True) 
 
     class Meta:
@@ -17,7 +18,6 @@ class MovieModelSerializer(serializers.ModelSerializer):
         
         return None
        
-
     def validate_release_date(self, value):
         if value.year < 1950:
             raise serializers.ValidationError('A data de lançamento não pode ser anterior a 1990')
